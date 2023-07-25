@@ -17,7 +17,23 @@ with st.sidebar:
     )
 if selected == "Menpower of RO-4":
         st.header("Menpower of RO-4")
-        st.write("Update Soon")
+        import streamlit as st
+        import pandas as pd
+        excel_file = "excel1.csv"
+        df = pd.read_csv(excel_file)
+        column_names = df.columns.tolist()
+
+    # Allow users to select a column for filtering
+        selected_column = st.selectbox("Select a column for filtering:", column_names)
+
+    # Create a filter for the selected column
+        filtered_df = df[df[selected_column] == st.text_input(f"Filter value for {selected_column}:")]
+
+    # Display the filtered DataFrame
+        st.write(filtered_df)
+
+        st.dataframe(df)
+
 if selected =="Dep ADV Data":
         st.header("Deposits Advances Data")
         st.write("update soon")
