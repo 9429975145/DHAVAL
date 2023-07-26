@@ -37,14 +37,6 @@ if selected == "Menpower of RO-4":
         st.write(filtered_df)
 
 
-
- if selected =="Branch Categorization & Staff Scalewise":
-        st.header("Branch Categorization")
-data = {
-    'Cader': ['SMGS-IV', 'MMGS-III', 'MMGS-II', 'JMGS-I', 'Office Assistant', 'Office Attendant'],
-    'No of Staff': [2, 8, 27, 58, 65, 11]
-        }
-
 # Create the bar chart
     fig = px.bar(data, x='Cader', y='No of Staff', labels={'No of Staff': 'No of Staff'})
 
