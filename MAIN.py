@@ -32,7 +32,7 @@ if selected == "Menpower of RO-4":
     # Display the filtered DataFrame
         st.write(filtered_df)
 
-        st.dataframe(df)
+        st.table(df)
 
 if selected =="Dep ADV Data":
         st.header("Deposits Advances Data")
