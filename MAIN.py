@@ -21,16 +21,17 @@ if selected == "Menpower of RO-4":
         import pandas as pd
         excel_file = "excel1.csv"
         df = pd.read_csv(excel_file)
-        column_names = df.columns.tolist()
 
     # Allow users to select a column for filtering
-        selected_column = st.selectbox("Select a column for filtering:", column_names)
+        selected_category = st.selectbox("Select a Category:", df['Branch Nmae'].unique())
 
     # Create a filter for the selected column
-        filtered_df = df[df[selected_column] == st.text_input(f"Filter value for {selected_column}:")]
+        filtered_df = df[df['Branch Nmae'] == selected_category]
 
     # Display the filtered DataFrame
         st.write(filtered_df)
+        st.write(df[["Branch Nmae","PF Code","Name Of Employee","Cader","AGE AS ON TODAY","TIME PERIOD"]])
+
 
         st.table(df)
 
