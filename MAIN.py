@@ -40,7 +40,7 @@ if selected == "Menpower of RO-4":
 
  if selected =="Branch Categorization & Staff Scalewise":
         st.header("Branch Categorization")
-        data = {
+data = {
     'Cader': ['SMGS-IV', 'MMGS-III', 'MMGS-II', 'JMGS-I', 'Office Assistant', 'Office Attendant'],
     'No of Staff': [2, 8, 27, 58, 65, 11]
         }
