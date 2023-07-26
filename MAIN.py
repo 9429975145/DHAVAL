@@ -39,9 +39,10 @@ if selected == "Menpower of RO-4":
 
 if selected =="Branch Categorization & Staff Scalewise":
     st.header("Staff Scalewise")
-       data = {
+    data = {
            'Cader': ['SMGS-IV', 'MMGS-III', 'MMGS-II', 'JMGS-I', 'Office Assistant', 'Office Attendant'],
-           'No of Staff': [2, 8, 27, 58, 65, 11]}
+           'No of Staff': [2, 8, 27, 58, 65, 11]
+    }
 # Create the bar chart
         fig = px.bar(data, x='Cader', y='No of Staff', labels={'No of Staff': 'No of Staff'})
 # Show the chart in Streamlit app
