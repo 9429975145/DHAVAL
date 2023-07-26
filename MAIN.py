@@ -41,7 +41,7 @@ if selected =="Branch Categorization & Staff Scalewise":
     st.header("Staff Scalewise")
     data = {
     'Cader': ['SMGS-IV', 'MMGS-III', 'MMGS-II', 'JMGS-I', 'OFFICE ASSISTANT', 'OFFICE ATTENDANT'],
-    'No of Staff': [2, 8, 27, 58, 65, 25]
+    'No of Staff': [2, 8, 27, 58, 65, 12]
 }
 
 # Create the bar chart
