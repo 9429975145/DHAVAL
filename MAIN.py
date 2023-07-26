@@ -50,13 +50,13 @@ fig = px.bar(data, x='Cader', y='No of Staff', labels={'No of Staff': 'No of Sta
 # Show the chart in Streamlit app
 st.plotly_chart(fig)
 
-if selected =="Dep ADV Data":
+if selected == "Dep ADV Data":
         st.header("Deposits Advances Data")
         st.write("update soon")
-if selected == ("FI Daily Data"):
+if selected == "FI Daily Data":
         st.header("Financial Inclusion Data")
         st.write("Update Soon")
-if selected == ("Contact"):
+if selected == "Contact":
         st.write("Mr. Yashpalsinh G Gohil_7574808400")
         st.write("Mr. George Daniel_7574808042")
         st.write("Mr. J K Chudasama_7574808041")
