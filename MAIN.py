@@ -39,26 +39,7 @@ if selected == "Menpower of RO-4":
 
 if selected =="Branch Categorization & Staff Scalewise":
     st.header("Staff Scalewise")
-   data = {
-    'Cader': ['SMGS-IV', 'MMGS-III', 'MMGS-II', 'JMGS-I', 'Office Assistant', 'Office Attendant'],
-    'No of Staff': [2, 8, 27, 58, 65, 11]
-}
-
-# Create the bar chart
-fig = px.bar(data, x='Cader', y='No of Staff', labels={'No of Staff': 'No of Staff'})
-
-st.subheader("Branch Categorization")
-data = {
-    'Branch': ['SCALE-A', 'SCALE-B', 'SCALE-C', 'SCALE-D'],
-    'No of Branch': [2, 35, 13, 2]
-}
-# Create the bar chart
-fig_1 = px.pie(data, values='No of Branch', names='Branch', title='Branch Categorization')
-
-# Show the chart in Streamlit app
-st.plotly_chart(fig)
-# Show the chart in Streamlit app
-st.plotly_chart(fig_1)
+   
 
     
 if selected =="Dep ADV Data":
