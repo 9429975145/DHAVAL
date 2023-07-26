@@ -31,9 +31,13 @@ if selected == "Menpower of RO-4":
     # Display the filtered DataFrame
         st.write(filtered_df)
         st.write(df[["Branch Nmae","PF Code","Name Of Employee","Cader","AGE AS ON TODAY","TIME PERIOD"]])
+        selected_category = st.selectbox("Select a Category:", df['TIME PERIOD'].unique())
+        filtered_df = df[df['TIME PERIOD'] == selected_category]
+        st.write(filtered_df)
 
 
-        st.table(df)
+
+       
 
 if selected =="Dep ADV Data":
         st.header("Deposits Advances Data")
