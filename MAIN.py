@@ -50,12 +50,12 @@ if selected =="Branch Categorization & Staff Scalewise":
      st.plotly_chart(fig)    
 
     st.subheader("Branch Categorization")
-    data_1 = {
+    data = {
     'Branch': ['SCALE-A', 'SCALE-B', 'SCALE-C', 'SCALE-D'],
     'No of Branch': [2, 35, 13, 2]
 }
 # Create the bar chart
-     fig_1 = px.pie(data_1, values='No of Branch', names='Branch', title='Branch Categorization')
+     fig_1 = px.pie(data, values='No of Branch', names='Branch', title='Branch Categorization')
 
 # Show the chart in Streamlit app
     st.plotly_chart(fig_1)
