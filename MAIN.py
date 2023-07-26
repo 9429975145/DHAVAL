@@ -13,7 +13,7 @@ st.markdown(
 with st.sidebar:
     selected = option_menu(
         menu_title="Main Menu",
-        options=["Menpower of RO-4","Dep ADV Data","FI Daily Data","Contact"],
+        options=["Menpower of RO-4","Branch Categorization & Staff Scalewise","Dep ADV Data","FI Daily Data","Contact"],
     )
 if selected == "Menpower of RO-4":
         st.header("Menpower of RO-4")
@@ -31,13 +31,25 @@ if selected == "Menpower of RO-4":
     # Display the filtered DataFrame
         st.write(filtered_df)
         st.write(df[["Branch Nmae","PF Code","Name Of Employee","Cader","AGE AS ON TODAY","TIME PERIOD"]])
+        
         selected_category = st.selectbox("Select a Category:", df['TIME PERIOD'].unique())
         filtered_df = df[df['TIME PERIOD'] == selected_category]
         st.write(filtered_df)
 
 
 
-       
+ if selected =="Branch Categorization & Staff Scalewise":
+        st.header("Branch Categorization")
+        data = {
+    'Cader': ['SMGS-IV', 'MMGS-III', 'MMGS-II', 'JMGS-I', 'Office Assistant', 'Office Attendant'],
+    'No of Staff': [2, 8, 27, 58, 65, 11]
+        }
+
+# Create the bar chart
+    fig = px.bar(data, x='Cader', y='No of Staff', labels={'No of Staff': 'No of Staff'})
+
+# Show the chart in Streamlit app
+    st.plotly_chart(fig)    
 
 if selected =="Dep ADV Data":
         st.header("Deposits Advances Data")
