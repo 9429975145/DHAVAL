@@ -47,9 +47,9 @@ if selected =="Branch Categorization & Staff Scalewise":
     fig = px.bar(data, x='Cader', y='No of Staff', labels={'No of Staff': 'No of Staff'})
 
 # Show the chart in Streamlit app
-    st.plotly_chart(fig)    
+     st.plotly_chart(fig)    
 
-     st.header("Branch Categorization")
+    st.subheader("Branch Categorization")
     data_1 = {
     'Branch': ['SCALE-A', 'SCALE-B', 'SCALE-C', 'SCALE-D'],
     'No of Branch': [2, 35, 13, 2]
