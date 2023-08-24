@@ -64,7 +64,7 @@ if selected == "FI Data":
     selected_category = st.selectbox("Select a Category:",df['Branch Name'].unique())
     filtered_df = df[df['Branch Name'] == selected_category]
     st.dataframe(filtered_df,width=1500)
-    st.dataframe(df)
+    st.dataframe(df,width=1500)
 
 if selected == "VISION & MISSION":
     import streamlit as st
