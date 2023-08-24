@@ -16,8 +16,8 @@ with st.sidebar:
         menu_title="Main Menu",
         options=["Staff-Position of RO-4","Branch Categorization & Staff Scalewise","Deposits Advances Data","FI Data","VISION & MISSION"]
     )
-if selected == "Menpower of RO-4":
-    st.header("Menpower of RO-4")
+if selected == "Staff-Position of RO-4":
+    st.header("Staff-Position of RO-4")
     import streamlit as st
     import pandas as pd
     excel_file = "STAFF.csv"
